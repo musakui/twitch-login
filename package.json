@@ -1,0 +1,30 @@
+{
+  "name": "twitch-login",
+  "version": "0.0.1",
+  "description": "A Custom Element that extends <a> to handle the Twitch OAuth login flow",
+  "author": "musakui",
+  "license": "MIT",
+  "repository": "github:musakui/twitch-login",
+  "type": "module",
+  "main": "src/index.js",
+  "browser": "src/browser.js",
+  "exports": {
+    ".": "src/index.js",
+    "./a": "src/browser.js",
+    "./component": "src/component.js"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "lint": "eslint ./src"
+  },
+  "devDependencies": {
+    "eslint": "^7.8.1",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  }
+}
