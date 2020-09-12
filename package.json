@@ -1,6 +1,6 @@
 {
   "name": "twitch-login",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Custom Element that extends <a> to handle the Twitch OAuth login flow",
   "author": "musakui",
   "license": "MIT",
