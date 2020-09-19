@@ -14,7 +14,7 @@ class TwitchLogin extends HTMLAnchorElement {
   }
 
   connectedCallback () {
-    const hash = parse()
+    const hash = parse(undefined, true)
     const save = this.hasAttribute('save')
     const scope = this.getAttribute('scope')
     if (!save) remove(tokenKey)

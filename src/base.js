@@ -30,12 +30,14 @@ export function create (clientID, scope, redirect, force, csrf) {
   return URL + Object.entries(params).map((i) => i.join('=')).join('&')
 }
 
-export function parse (hash = location.hash) {
+export function parse (hash = location.hash, clear = false) {
   if (!hash) return null
   const csrf = store(csrfKey)
   const param = new URLSearchParams(hash.substring(1))
   const { state, ...r } = Object.fromEntries(param.entries())
-  history.pushState(null, null, ' ')
+  if (clear) {
+    history.pushState(null, null, ' ')
+  }
   if (csrf) {
     remove(csrfKey)
     if (csrf !== state) return null
